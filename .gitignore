@@ -1,0 +1,54 @@
+# Node.js
+node_modules/
+
+# npm
+*.log
+*.lock
+npm-debug.log*
+
+# Express.js
+dist/
+build/
+
+# React
+build/
+public/
+
+# Visual Studio Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+
+# IDE (e.g., WebStorm)
+.idea/
+
+# Dependency directories
+/jspm_packages/
+/bower_components/
+
+# Distribution files
+/dist/
+
+# Typescript
+*.tsbuildinfo
+*.tsbuildinfo.*
+
+# Testing
+/coverage/
+/.nyc_output/
+
+# MongoDB
+/data/
+/db/
+/mongod.lock
