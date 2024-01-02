@@ -8,7 +8,7 @@ The Simple Note-Taking API allows users to create, retrieve, update, and delete 
 
 # Credentials
 
-  Username : Prashant and 
+  Username : Prashant   <br> 
   Password : Password
   
 # API Endpoints
