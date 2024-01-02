@@ -8,4 +8,4 @@ const noteSchema = new mongoose.Schema({
   
   });
 
-  module.export = noteSchema;
+  module.exports = noteSchema;

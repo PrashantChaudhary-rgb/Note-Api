@@ -10,7 +10,7 @@ const errorHandler = (err, req, res, next) => {
     }
   
     if (err.message === 'Not Found') {
-      return res.status(404).json({ error: 'Resource not found' });
+      return res.status(404).json({ error: 'Resource/ Id  not found' });
     }
   
     res.status(500).json({ error: 'Internal Server Error' });

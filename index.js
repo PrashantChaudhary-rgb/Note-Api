@@ -20,7 +20,7 @@ mongoose.connect(uri + "notes_db")
 .catch((err)=>{console.error('MongoDB connection error:', err.message)});
 
 // Middleware
-app.use(bodyParser.json());
+app.use(express.json())
 
 const auth = basicAuth({
   users: { 'Prashant': 'Password' }, // Add your username and password
@@ -39,6 +39,7 @@ const Note = mongoose.model('Note', noteSchema);
   app.post('/api/notes', validateNote, async (req, res) => {
     try {
       const { title, content } = req.body;
+     
       const sequence = await Sequence.findOneAndUpdate(
         { model: 'Note', field: 'id' },
         { $inc: { count: 1 } },
@@ -48,8 +49,8 @@ const Note = mongoose.model('Note', noteSchema);
       // Create a new note with the provided data and the generated id
       const note = new Note({
         id: sequence.count,
-        title,
-        content,
+        title ,
+        content ,
       });
       await note.save();
       res.status(201).json(note);
@@ -103,6 +104,9 @@ const Note = mongoose.model('Note', noteSchema);
   app.delete('/api/notes/:id', async (req, res, next) => {
     try {
       const note = await Note.findOneAndDelete({ id: req.params.id });
+      if (!note) {
+        return next(new Error('Not Found'));
+      }
       res.json({ message: 'Note deleted successfully' });
     } catch (error) {
       next(error);
