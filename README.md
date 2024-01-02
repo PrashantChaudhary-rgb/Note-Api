@@ -1,7 +1,9 @@
 # Simple Note-Taking API
 
 This is a simple RESTful API for a note-taking application built using Node.js, Express.js, and MongoDB.
+# Live link
 
+ https://note-api-cmrw.onrender.com/
 ## About
 
 The Simple Note-Taking API allows users to create, retrieve, update, and delete text notes. It utilizes MongoDB as the database for storing notes. Basic Authentication is optionally available for endpoint protection.
