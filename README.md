@@ -6,6 +6,9 @@ This is a simple RESTful API for a note-taking application built using Node.js, 
 
 The Simple Note-Taking API allows users to create, retrieve, update, and delete text notes. It utilizes MongoDB as the database for storing notes. Basic Authentication is optionally available for endpoint protection.
 
+#credentials
+  Username : Prashant
+  Password : Password
 # API Endpoints
 
 The following are the API endpoints provided by the Simple Note-Taking API:
